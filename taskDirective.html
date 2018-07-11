@@ -1,5 +1,7 @@
 
 <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
-        <label class="custom-control-label" for="defaultUnchecked">{{ task.taskName }}</label>
+        <input type="checkbox" class="custom-control-input">
+        <input type="checkbox" value="11">
+        <label  ng-class="{'deleted-task':task.taskDone}" class="custom-control-label">{{ task.taskName }}</label>
+        <button >x</button>
     </div>
