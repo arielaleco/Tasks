@@ -15,7 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
     <script src="app.js"></script>
@@ -44,17 +44,21 @@
             </div>
         </div>
 
-        <div class="btn-group btn-group-toggle" data-toggle="buttons" ng-model="filter" ng-click="filterTasks()">
-            <label class="btn btn-secondary active">
-                <input ng-model="filter.all" type="radio" name="options" id="option1" autocomplete="off" checked> All
+        
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" ng-model="filter" >
+            <label class="btn btn-secondary active" ng-click="changefilter(1)">
+                <input  type="radio" name="options" id="option1" autocomplete="off" > All
             </label>
-            <label class="btn btn-secondary">
-                <input ng-model="filter.active" type="radio" name="options" id="option2" autocomplete="off"> Active
+            <label class="btn btn-secondary" ng-click="changefilter(2)" >
+                <input  type="radio" name="options" id="option2" autocomplete="off" checked> Active
             </label>
-            <label class="btn btn-secondary">
-                <input ng-model="filter.complete" type="radio" name="options" id="option3" autocomplete="off"> Complete
+            <label class="btn btn-secondary" ng-click="changefilter(3)" >
+                <input  type="radio" name="options" id="option3" autocomplete="off"> Complete
             </label>
         </div>
+
+
 
 
 
