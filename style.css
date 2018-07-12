@@ -24,13 +24,17 @@ main{
    
 }
 
-input[type=checkbox]:checked + label {
-    /* color: #f00; */
-    /* font-style: normal; */
-   
+
+.task-done  {    
     text-decoration: line-through;
     color: lightgray;
   } 
+
+/* input[type=checkbox]:checked + label {    
+    text-decoration: line-through;
+    color: lightgray;
+  }  */
+
   /* input[type=checkbox]:checked ~ button {
     
    display: none;

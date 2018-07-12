@@ -28,11 +28,9 @@ app.controller("tasksCtrl", function ($scope, tasksServices) {
     $scope.filterTasks = function (task) {
 
         $scope.completed = 0;
-        for(var i=0;i< $scope.tasksArr.length;i++)
-        {
-            if ($scope.tasksArr[i].taskDone)
-            {
-                $scope.completed++; 
+        for (var i = 0; i < $scope.tasksArr.length; i++) {
+            if ($scope.tasksArr[i].taskDone) {
+                $scope.completed++;
             }
         }
         console.log(" in filterTasks with " + task.taskName + " " + task.taskDone);
@@ -58,6 +56,11 @@ app.controller("tasksCtrl", function ($scope, tasksServices) {
         }
 
     }
+
+    $scope.checkValue1 = function(){
+ alert("ddddd");
+    }
+    
 
 
 });
