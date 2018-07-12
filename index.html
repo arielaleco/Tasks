@@ -15,7 +15,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
     <script src="app.js"></script>
@@ -28,25 +30,20 @@
 </head>
 
 <body>
+    <main>
     <div ng-controller="tasksCtrl">
-        {{5+5}}
-        <h1>Hello, world!</h1>
+           
+      
+
+        <h1>Todos</h1>
         <!-- <label for="what-next"></label> -->
         <input id="what-next" type="text" placeholder="Whats Next ?" ng-model="needTodo">
 
 
         <button ng-click="PushMe(needTodo)">PushMe</button>
 
-        <div class="tasks-list list-group">
-            <div ng-repeat="task in tasksArr  | filter : filterTasks">
-
-                <task-directive></task-directive>
-            </div>
-        </div>
-
-        
-
-        <div class="btn-group btn-group-toggle" data-toggle="buttons" ng-model="filter" >
+                
+        <div class="btn-group btn-group-toggle mt-3" data-toggle="buttons" ng-model="filter" >
             <label class="btn btn-secondary active" ng-click="changefilter(1)">
                 <input  type="radio" name="options" id="option1" autocomplete="off" > All
             </label>
@@ -57,12 +54,18 @@
                 <input  type="radio" name="options" id="option3" autocomplete="off"> Complete
             </label>
         </div>
+        <h6 class="mt-2">{{tasksArr.length}} Items , {{completed}} complete , {{tasksArr.length-completed}} Left to do</h6>
 
+        <div class="mt-2 tasks-list list-group">
+            <div ng-repeat="task in tasksArr  | filter : filterTasks">
 
-
+                <task-directive></task-directive>
+            </div>
+        </div>
 
 
     </div>
+</main>
 </body>
 
 </html>

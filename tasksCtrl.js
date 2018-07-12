@@ -16,18 +16,26 @@ app.controller("tasksCtrl", function ($scope, tasksServices) {
 
     }
     $scope.filter = 1;
+    $scope.completed = 0;
+
     $scope.changefilter = function (setfilter) {
         $scope.filter = setfilter;
 
         console.log($scope.filter);
-        // $scope.selected = "active";
-
-        // console.log($scope.my);
     }
+
 
     $scope.filterTasks = function (task) {
 
-        console.log(task);
+        $scope.completed = 0;
+        for(var i=0;i< $scope.tasksArr.length;i++)
+        {
+            if ($scope.tasksArr[i].taskDone)
+            {
+                $scope.completed++; 
+            }
+        }
+        console.log(" in filterTasks with " + task.taskName + " " + task.taskDone);
         if ($scope.filter == 1) //all 
         {
             console.log("in all");
@@ -48,8 +56,8 @@ app.controller("tasksCtrl", function ($scope, tasksServices) {
             if (task.taskDone) { return true; }
             else { return false; }
         }
-                
+
     }
 
-    
+
 });

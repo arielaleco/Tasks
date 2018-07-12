@@ -1,7 +1,18 @@
 body{
     padding: 20px;
+    background-image: url("https://media.swncdn.com/cms/CW/family/12821-to-do-list.1200w.tn.jpg");
+    
 }
 
+main{
+    margin: auto;
+    width:400px;
+    background-color: white;
+    opacity: 0.9;
+    padding: 50px;
+    border-radius: 30px;
+    
+}
 .delete-button{
     color:red;
     border: 0;
@@ -12,29 +23,39 @@ body{
     width: 250px;
    
 }
+
 input[type=checkbox]:checked + label {
     /* color: #f00; */
     /* font-style: normal; */
-    font-weight: 600;
+   
     text-decoration: line-through;
+    color: lightgray;
   } 
-  input[type=checkbox]:checked ~ button {
-    /* color: #f00; */
-    /* font-style: normal; */
-   color: blue;
+  /* input[type=checkbox]:checked ~ button {
+    
    display: none;
-  } 
-  .one-task{
-      padding: 2px;
-      border-bottom: 0.1px solid gray;
-      width:300px;
+  }  */
+  .one-task  .delete-button {
+      display: none;
+  }
+  .one-task:hover  .delete-button {
+    /* display: none; */
+   
+    display: inline;
+   
   }
 
+  .one-task{
+      
+      padding: 2px;
+      border-bottom: 0.1px solid gray;
+      width:310px;
+  }
+  
 
 
-  .active {
-    background-color: #4CAF50 ;
-}
+
+ 
 
 /* 
 
