@@ -12,6 +12,7 @@ main{
     padding: 50px;
     border-radius: 30px;
     
+    
 }
 .delete-button{
     color:red;
@@ -54,6 +55,7 @@ main{
       padding: 2px;
       border-bottom: 0.1px solid gray;
       width:310px;
+     
   }
   
 
