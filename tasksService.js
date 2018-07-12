@@ -12,9 +12,19 @@ app.factory('tasksServices', function ($log, $q,$http) {
 
     }
 
+    function deleteThisTask(task){             
+        var n = tasksArr.indexOf(task);                
+        if (n>-1)
+        {
+            tasksArr.splice(n, 1);
+        }
+            
+    }
+
 
     return {
-        addTask : addThisTask
+        addTask     : addThisTask,
+        deleteTask  : deleteThisTask
      
     }
 

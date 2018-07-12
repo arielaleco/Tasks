@@ -1,7 +1,7 @@
 
-<div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input">
-        <input type="checkbox" value="11">
-        <label  ng-class="{'deleted-task':task.taskDone}" class="custom-control-label">{{ task.taskName }}</label>
-        <button >x</button>
+<div class="one-task">
+ 
+        <input id="my-checkbox" type="checkbox" value="">
+        <label  for="my-checkbox" class="task-label"  >{{ task.taskName }}</label>
+        <button  class="delete-button" ng-click="DeleteTheTask(task)" >x</button>
     </div>

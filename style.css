@@ -2,13 +2,30 @@ body{
     padding: 20px;
 }
 
-.deleted{
-    color:red;
-    text-decoration: line-through;
-}
 .delete-button{
     color:red;
     border: 0;
     background-color: white;
 }
 
+.task-label{
+    width: 250px;
+   
+}
+input[type=checkbox]:checked + label {
+    /* color: #f00; */
+    /* font-style: normal; */
+    font-weight: 600;
+    text-decoration: line-through;
+  } 
+  input[type=checkbox]:checked ~ button {
+    /* color: #f00; */
+    /* font-style: normal; */
+   color: blue;
+   display: none;
+  } 
+  .one-task{
+      padding: 2px;
+      border-bottom: 0.1px solid gray;
+      width:300px;
+  }

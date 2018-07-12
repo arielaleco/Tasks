@@ -10,5 +10,16 @@ $scope.PushMe = function (task) {
    
 }
 
+$scope.DeleteTheTask = function (task) {
+    tasksServices.deleteTask(task);
+    $scope.tasksArr = tasksArr;
+   
+}
+
+$scope.changeFilter = function(state){
+    
+}
+
+
 
 });

@@ -29,24 +29,34 @@
 
 <body>
     <div ng-controller="tasksCtrl">
-{{5+5}}
+        {{5+5}}
         <h1>Hello, world!</h1>
         <!-- <label for="what-next"></label> -->
         <input id="what-next" type="text" placeholder="Whats Next ?" ng-model="needTodo">
 
+
         <button ng-click="PushMe(needTodo)">PushMe</button>
 
         <div class="tasks-list list-group">
-                <div ng-repeat="task in tasksArr" class="one-task">
+            <div ng-repeat="task in tasksArr">
 
-                    <task-directive></task-directive>
-                </div>
+                <task-directive></task-directive>
             </div>
-          
-            
-            <input type="checkbox" value="11">
-            <input type="checkbox" value="22">
-            <input type="checkbox" value="33">
+        </div>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input ng-click="changeFilter(0)" type="radio" name="options" id="option1" autocomplete="off" checked> All
+            </label>
+            <label class="btn btn-secondary">
+              <input ng-click="changeFilter(1)" type="radio" name="options" id="option2" autocomplete="off"> Active
+            </label>
+            <label class="btn btn-secondary">
+              <input ng-click="changeFilter(2)" type="radio" name="options" id="option3" autocomplete="off"> Complete
+            </label>
+          </div>
+
+      
 
     </div>
 </body>
