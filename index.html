@@ -38,25 +38,25 @@
         <button ng-click="PushMe(needTodo)">PushMe</button>
 
         <div class="tasks-list list-group">
-            <div ng-repeat="task in tasksArr">
+            <div ng-repeat="task in tasksArr  | filter : filterTasks">
 
                 <task-directive></task-directive>
             </div>
         </div>
 
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" ng-model="filter" ng-click="filterTasks()">
             <label class="btn btn-secondary active">
-              <input ng-click="changeFilter(0)" type="radio" name="options" id="option1" autocomplete="off" checked> All
+                <input ng-model="filter.all" type="radio" name="options" id="option1" autocomplete="off" checked> All
             </label>
             <label class="btn btn-secondary">
-              <input ng-click="changeFilter(1)" type="radio" name="options" id="option2" autocomplete="off"> Active
+                <input ng-model="filter.active" type="radio" name="options" id="option2" autocomplete="off"> Active
             </label>
             <label class="btn btn-secondary">
-              <input ng-click="changeFilter(2)" type="radio" name="options" id="option3" autocomplete="off"> Complete
+                <input ng-model="filter.complete" type="radio" name="options" id="option3" autocomplete="off"> Complete
             </label>
-          </div>
+        </div>
 
-      
+
 
     </div>
 </body>

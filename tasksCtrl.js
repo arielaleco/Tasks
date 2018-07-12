@@ -16,10 +16,21 @@ $scope.DeleteTheTask = function (task) {
    
 }
 
-$scope.changeFilter = function(state){
-    
-}
+$scope.filter= {
+    all: false,
+    complete: false,
+    active: false
+};
 
+$scope.filterTasks = function(task) {
 
+    console.log($scope.filter);
+    if (task && (task.taskDone) && ($scope.filter.complete)){
+      return false;
+    } else {
+      return true;
+    }
+    // return (car.brand.includes($scope.query) || car.model.includes($scope.query))
+  }
 
 });
